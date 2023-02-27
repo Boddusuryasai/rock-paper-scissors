@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import "./App.css"
+import React, { useState } from "react";
+import "./App.css";
 function App() {
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
@@ -12,7 +12,7 @@ function App() {
     setPlayerChoice(choice);
     setComputerChoice(computerChoice);
     determineWinner(choice, computerChoice);
-  }
+  };
 
   const determineWinner = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
@@ -26,20 +26,29 @@ function App() {
     } else {
       setWinner("Computer");
     }
-  }
+  };
 
   return (
-    <div className='main'>
+    <div className="main">
       <h1>Rock Paper Scissors</h1>
       <div>
-        <button  onClick={() => handlePlayerChoice("rock")}>
-          <img src='https://res.cloudinary.com/dybiiddob/image/upload/v1677482218/Victory_hand_gesture_-_480x720_ds7rcd.png' alt=''></img>
+        <button onClick={() => handlePlayerChoice("rock")}>
+          <img
+            src="https://res.cloudinary.com/dybiiddob/image/upload/v1677482501/Fist_hand_gesture_-_480x720_baq24x.png"
+            alt="rock"
+          ></img>
         </button>
         <button onClick={() => handlePlayerChoice("paper")}>
-          <img src='https://res.cloudinary.com/dybiiddob/image/upload/v1677482501/Fist_hand_gesture_-_480x720_baq24x.png' alt=''></img>
+          <img
+            src="https://res.cloudinary.com/dybiiddob/image/upload/v1677482469/Open_Hand_gesture_-_480x720_lapbrx.png"
+            alt="paper"
+          ></img>
         </button>
         <button onClick={() => handlePlayerChoice("scissors")}>
-          <img src='https://res.cloudinary.com/dybiiddob/image/upload/v1677482469/Open_Hand_gesture_-_480x720_lapbrx.png' alt=''></img>
+          <img
+            src="https://res.cloudinary.com/dybiiddob/image/upload/v1677482218/Victory_hand_gesture_-_480x720_ds7rcd.png"
+            alt="scissors"
+          ></img>
         </button>
       </div>
       <div>
